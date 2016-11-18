@@ -43,95 +43,186 @@ int main(int argc, char const *argv[]) {
     		string telefono;
     		string correo;
     		if(select == 1){
+    			bool find = false;
     			int nivel;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese el nivel de amistad del 1no al 100: ";
-    			cin>>nivel;
-    			contactos.push_back(new Friend(nombre,telefono,correo,nivel));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+    				cin>> correo;
+    				cout<<"Ingrese el nivel de amistad del 1no al 100: ";
+    				cin>>nivel;
+    				contactos.push_back(new Friend(nombre,telefono,correo,nivel));
+    			}
     		}
     		else if(select == 2){
+    			bool find = false;
     			string date;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese la fecha que comenzaron a salir: ";
-    			cin>>date;
-    			contactos.push_back(new Partner(nombre,telefono,correo,date));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+	    			cin>> correo;
+	    			cout<<"Ingrese la fecha que comenzaron a salir: ";
+	    			cin>>date;
+	    			contactos.push_back(new Partner(nombre,telefono,correo,date));
+    			}
     		}
     		else if(select == 3){
+    			bool find = false;
     			string trabajo;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese el departamento de trabajo: ";
-    			cin>>trabajo;
-    			contactos.push_back(new WorkPartner(nombre,telefono,correo,trabajo));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+	    			cin>> correo;
+	    			cout<<"Ingrese el departamento de trabajo: ";
+	    			cin>>trabajo;
+	    			contactos.push_back(new WorkPartner(nombre,telefono,correo,trabajo));
+    			}
     		}
     		else if(select == 4){
+    			bool find = false;
     			string clase;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese la clase donde se conocieron: ";
-    			cin>>clase;
-    			contactos.push_back(new Classmate(nombre,telefono,correo,clase));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+	    			cin>> correo;
+	    			cout<<"Ingrese la clase donde se conocieron: ";
+	    			cin>>clase;
+	    			contactos.push_back(new Classmate(nombre,telefono,correo,clase));;
+    			}
     		}
     		else if(select == 5){
+    			bool find = false;
     			string parentesco;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese parentesco: ";
-    			cin>>parentesco;
-    			contactos.push_back(new Relative(nombre,telefono,correo,parentesco));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+    				cin>> correo;
+    				cout<<"Ingrese parentesco: ";
+    				cin>>parentesco;
+    				contactos.push_back(new Relative(nombre,telefono,correo,parentesco));
+    			}
     		}
     		else if(select == 6){
+    			bool find = false;
     			string horario;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese horario disponible: ";
-    			cin>>horario;
-    			contactos.push_back(new Lover(nombre,telefono,correo,horario));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+	    			cin>> correo;
+	    			cout<<"Ingrese horario disponible: ";
+	    			cin>>horario;
+	    			contactos.push_back(new Lover(nombre,telefono,correo,horario));
+    			}
     		}
     		else if(select == 7){
+    			bool find = false;
     			int nivel;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
-    			cout<<"Ingrese el correo: ";
-    			cin>> correo;
-    			cout<<"Ingrese nivel de odio del 1 al 100: ";
-    			cin>>nivel;
-    			contactos.push_back(new Blocked(nombre,telefono,correo,nivel));
+    			for (int i = 0; i < contactos.size(); ++i)
+    			{
+    				if (contactos.at(i) -> getTel() == telefono)
+    				{
+    					find = true;
+    				}
+    			}
+    			if (find){
+    				cout<<"Se encontró el número de teléfono."<<endl;
+    			}else{
+    				cout<<"Ingrese el correo: ";
+	    			cin>> correo;
+	    			cout<<"Ingrese nivel de odio del 1 al 100: ";
+	    			cin>>nivel;
+	    			contactos.push_back(new Blocked(nombre,telefono,correo,nivel));
+    			}
     		}
     		else{
     			cout<<"Ingresó una opción inválida.";
     		}
     	}
     	else if(opcion == 2){
-
+    		for (int i = 0; i < contactos.size(); ++i)
+    		{
+    			cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+    		}
+    		int posicion;
+    		cout<<"Ingrese la posición a eliminar: ";
+    		cin>>posicion;
+    		contactos.erase(contactos.begin()+posicion);
     	}
     	else if(opcion == 3){
             int i = 0;
