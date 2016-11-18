@@ -1,7 +1,6 @@
 #include "Contact.h"
 #include <string>
 #include <sstream>
-using std::stringstream
 using std::string;
 Contact::Contact(string nombre, string tele, string correo){
 	name = nombre;
@@ -24,6 +23,6 @@ string Contact::getTel(){
 void Contact::setEmail(string correo){
 	email = correo;
 }
-string getEmail(){
+string Contact::getEmail(){
 	return email;
 }
