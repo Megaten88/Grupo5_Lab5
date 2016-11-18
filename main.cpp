@@ -225,7 +225,10 @@ int main(int argc, char const *argv[]) {
     		}
     	}
     	else if(opcion == 2){
-
+    		int posicion;
+    		cout<<"Ingrese la posición a eliminar: ";
+    		cin>>posicion;
+    		contactos.erase(contactos.begin()+posicion);
     	}
     	else if(opcion == 3){
             int i = 0;
