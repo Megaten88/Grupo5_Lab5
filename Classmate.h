@@ -3,6 +3,7 @@
 #include <string>
 using std::string;
 
+
 class Classmate : public Contact {
     protected:
         string classmet;
