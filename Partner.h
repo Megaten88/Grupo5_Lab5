@@ -2,7 +2,7 @@
 #include <string>
 using std::string;
 
-class Partner::public Contact{
+class Partner:public Contact{
 private:
 	string date;
 public:
