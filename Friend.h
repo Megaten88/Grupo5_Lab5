@@ -6,7 +6,7 @@ class Friend:public Contact{
 private:
 	int flevel;
 public:
-	Friend(string, int);
+	Friend(string,string,string, int);
 	~Friend();
 	void setFlevel(int);
 	int getFlevel();
