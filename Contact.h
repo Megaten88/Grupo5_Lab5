@@ -9,7 +9,7 @@ protected:
 	string email;
 public:
 	Contact(string,string,string);
-	~Contact();
+	virtual ~Contact();
 	void setName(string);
 	string getName();
 	void setTel(string);

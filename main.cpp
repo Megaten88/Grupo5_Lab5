@@ -17,10 +17,26 @@
 
 using namespace std;
 
-void escribirArchivo(vector<Contact*> contactos);
-
 
 int menu();
+
+/*
+
+vector<Contact*> contactos;
+std::cout << "hola" << std::endl;
+
+Contact* prueba = new Lover("hola","soy","yo","el duro");
+contactos.push_back(prueba);
+int i = 0;
+while(contactos.at(i)!= NULL){
+    Contact* temp = contactos.at(i);
+    std::cout << temp->toString() << std::endl;
+    i++;
+}
+
+*/
+
+
 
 int main(int argc, char const *argv[]) {
 	vector<Contact*> contactos;
@@ -136,7 +152,7 @@ int main(int argc, char const *argv[]) {
 	    			cout<<"Ingrese la clase donde se conocieron: ";
 	    			cin>>clase;
 	    			contactos.push_back(new Classmate(nombre,telefono,correo,clase));;
-    			}
+    			}	
     		}
     		else if(select == 5){
     			bool find = false;
@@ -160,7 +176,7 @@ int main(int argc, char const *argv[]) {
     				cout<<"Ingrese parentesco: ";
     				cin>>parentesco;
     				contactos.push_back(new Relative(nombre,telefono,correo,parentesco));
-    			}
+    			}			
     		}
     		else if(select == 6){
     			bool find = false;
@@ -215,17 +231,62 @@ int main(int argc, char const *argv[]) {
     		}
     	}
     	else if(opcion == 2){
-    		for (int i = 0; i < contactos.size(); ++i)
-    		{
-    			if (dynamic_cast<Friend*>)
-    			{
-    				/* code */
-    			}
+    		cout<<"-------Categorías-------"<<endl;
+    		if (contactos.size() > 0){
+    			cout<<"*****Amigos*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Friend*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Pareja*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Partner*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Compañero de Trabajo*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<WorkPartner*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Compañero de clase*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Classmate*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Familiares*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Relative*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Amantes*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Lover*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Bloqueos*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Blocked*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		int posicion;
+	    		cout<<"Ingrese la posición a eliminar: ";
+	    		cin>>posicion;
+	    		contactos.erase(contactos.begin()+posicion);
     		}
-    		int posicion;
-    		cout<<"Ingrese la posición a eliminar: ";
-    		cin>>posicion;
-    		contactos.erase(contactos.begin()+posicion);
     	}
     	else if(opcion == 3){
             int i = 0;
@@ -236,7 +297,7 @@ int main(int argc, char const *argv[]) {
             }
     	}
     	else if(opcion == 4){
-            escribirArchivo(contactos);
+
     	}else{
     		cout<<"Ingresó una opción inválida"<<endl;
     	}
@@ -256,19 +317,4 @@ int menu(){
 	cout <<"Ingrese una opción: "<<endl;
 	cin>>lectura;
 	return lectura;
-}
-
-void escribirArchivo(vector<Contact*> contactos){
-     ofstream salida ;
-     salida.open("Listado.txt");
-
-    int i = 0;
-    while( i < contactos.size() ){
-        Contact* temp = contactos.at(i);
-        string e = temp->toString();
-        salida << e;
-        salida << endl;
-        i++;
-    }
-    salida.close();
 }
