@@ -1,4 +1,17 @@
+main: main.o  Contact.o Blocked.o Relative.o Lover.o Classmate.o WorkPartner.o Partner.o Friend.o
+	g++ main.o  Contact.o Blocked.o Relative.o Lover.o Classmate.o WorkPartner.o Partner.o Friend.o -o main
 
+main.o: main.cpp Contact.h Blocked.h Relative.h Lover.h Classmate.h WorkPartner.h Partner.h Friend.h
+	g++ -c main.cpp
+
+Blocked.o: Contact.h Blocked.h Blocked.cpp
+	g++ -c Blocked.cpp
+
+Relative.o: Contact.h Relative.h Relative.cpp
+	g++ -c Relative.cpp
+
+Lover.o : Contact.h Lover.h Lover.cpp
+	g++ -c Lover.cpp
 
 Classmate.o: Contact.h Classmate.h Classmate.cpp
 	g++ -c Classmate.cpp
