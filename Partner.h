@@ -1,5 +1,6 @@
 #include "Contact.h"
 #include <string>
+using std::string;
 
 class Partner::public Contact
 {

@@ -1,5 +1,8 @@
 #include "Contact.h"
 #include <string>
+#include <sstream>
+using std::stringstream
+using std::string;
 Contact::Contact(string nombre, string tele, string correo){
 	name = nombre;
 	tel = tele;
