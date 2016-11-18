@@ -228,7 +228,12 @@ int main(int argc, char const *argv[]) {
 
     	}
     	else if(opcion == 3){
-
+            int i = 0;
+            while( i < contactos.size() ){
+                Contact* temp = contactos.at(i);
+                std::cout << temp->toString() << std::endl;
+                i++;
+            }
     	}
     	else if(opcion == 4){
 
