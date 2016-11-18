@@ -17,6 +17,7 @@
 
 using namespace std;
 
+void escribirArchivo(vector<Contact*> contactos);
 
 int menu();
 
@@ -152,7 +153,7 @@ int main(int argc, char const *argv[]) {
 	    			cout<<"Ingrese la clase donde se conocieron: ";
 	    			cin>>clase;
 	    			contactos.push_back(new Classmate(nombre,telefono,correo,clase));;
-    			}	
+    			}
     		}
     		else if(select == 5){
     			bool find = false;
@@ -176,7 +177,7 @@ int main(int argc, char const *argv[]) {
     				cout<<"Ingrese parentesco: ";
     				cin>>parentesco;
     				contactos.push_back(new Relative(nombre,telefono,correo,parentesco));
-    			}			
+    			}
     		}
     		else if(select == 6){
     			bool find = false;
@@ -297,7 +298,7 @@ int main(int argc, char const *argv[]) {
             }
     	}
     	else if(opcion == 4){
-
+            escribirArchivo(contactos);
     	}else{
     		cout<<"Ingresó una opción inválida"<<endl;
     	}
@@ -305,6 +306,84 @@ int main(int argc, char const *argv[]) {
 
     return 0;
 }
+
+void escribirArchivo(vector<Contact*> contactos){
+
+    ofstream salida;
+    salida.open("Listado.txt");
+
+    salida<<"-------Categorías-------"<<endl;
+    salida<<endl;
+    if (contactos.size() > 0){
+        salida<<"*****Amigos*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Friend*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+
+            }
+        }
+        salida<<"*****Pareja*****"<<endl;
+        salida<<endl;
+
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Partner*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+
+            }
+        }
+        salida<<"*****Compañero de Trabajo*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<WorkPartner*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+            }
+        }
+        salida<<"*****Compañero de clase*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Classmate*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+
+            }
+        }
+        salida<<"*****Familiares*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Relative*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+            }
+        }
+        salida<<"*****Amantes*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Lover*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+
+            }
+        }
+        salida<<"*****Bloqueos*****"<<endl;
+        for (int i = 0; i < contactos.size(); ++i){
+            if (dynamic_cast<Blocked*> (contactos.at(i))!=NULL)
+            {
+                salida<<i<<")"<<contactos.at(i) -> toString()<<endl;
+                salida<<endl;
+
+            }
+        }
+
+    salida.close();
+
+
+    }
+}
+
 
 int menu(){
 	int lectura;
