@@ -83,27 +83,39 @@ int main(int argc, char const *argv[]) {
     			}
     		}
     		else if(select == 2){
-    			bool find = false;
-    			string date;
-    			cout<<"Ingrese el nombre: ";
-    			cin>>nombre;
-    			cout<<"Ingrese el telefono: ";
-    			cin>> telefono;
+    			int numPareja = 0;
     			for (int i = 0; i < contactos.size(); ++i)
     			{
-    				if (contactos.at(i) -> getTel() == telefono)
-    				{
-    					find = true;
-    				}
+    				if (dynamic_cast<Partner*> (contactos.at(i))!=NULL)
+	    			{
+	    				numPareja++;
+	    			}
     			}
-    			if (find){
-    				cout<<"Se encontró el número de teléfono."<<endl;
+    			if(numPareja < 1){
+    				bool find = false;
+	    			string date;
+	    			cout<<"Ingrese el nombre: ";
+	    			cin>>nombre;
+	    			cout<<"Ingrese el telefono: ";
+	    			cin>> telefono;
+	    			for (int i = 0; i < contactos.size(); ++i)
+	    			{
+	    				if (contactos.at(i) -> getTel() == telefono)
+	    				{
+	    					find = true;
+	    				}
+	    			}
+	    			if (find){
+	    				cout<<"Se encontró el número de teléfono."<<endl;
+	    			}else{
+	    				cout<<"Ingrese el correo: ";
+		    			cin>> correo;
+		    			cout<<"Ingrese la fecha que comenzaron a salir: ";
+		    			cin>>date;
+		    			contactos.push_back(new Partner(nombre,telefono,correo,date));
+	    			}
     			}else{
-    				cout<<"Ingrese el correo: ";
-	    			cin>> correo;
-	    			cout<<"Ingrese la fecha que comenzaron a salir: ";
-	    			cin>>date;
-	    			contactos.push_back(new Partner(nombre,telefono,correo,date));
+    				cout<<"Ya tienes una pareja, cochinote. Agrega amantes mejor (¬_¬)."<<endl;
     			}
     		}
     		else if(select == 3){
@@ -286,15 +298,69 @@ int main(int argc, char const *argv[]) {
 	    		cout<<"Ingrese la posición a eliminar: ";
 	    		cin>>posicion;
 	    		contactos.erase(contactos.begin()+posicion);
+    		}else{
+    			cout<<"No hay contactos en la lista"<<endl;
     		}
     	}
     	else if(opcion == 3){
-            int i = 0;
-            while( i < contactos.size() ){
-                Contact* temp = contactos.at(i);
-                std::cout << temp->toString() << std::endl;
-                i++;
-            }
+            cout<<"-------Categorías-------"<<endl;
+    		if (contactos.size() > 0){
+    			cout<<"*****Amigos*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Friend*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Pareja*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Partner*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Compañero de Trabajo*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<WorkPartner*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Compañero de clase*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Classmate*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Familiares*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Relative*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Amantes*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Lover*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		cout<<"*****Bloqueos*****"<<endl;
+    			for (int i = 0; i < contactos.size(); ++i){
+	    			if (dynamic_cast<Blocked*> (contactos.at(i))!=NULL)
+	    			{
+	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+	    			}
+	    		}
+	    		int posicion;
+	    		cout<<"Ingrese la posición a eliminar: ";
+	    		cin>>posicion;
+	    		contactos.erase(contactos.begin()+posicion);
+    		}else{
+    			cout<<"No hay contactos en la lista"<<endl;
+    		}
     	}
     	else if(opcion == 4){
 
@@ -302,7 +368,10 @@ int main(int argc, char const *argv[]) {
     		cout<<"Ingresó una opción inválida"<<endl;
     	}
     }while(opcion!= 5);
-
+    	for (int i = 0; i < contactos.size; ++i){
+	    		contactos.erase(contactos.begin() + i);
+	   	}
+    	contactos.clear();
     return 0;
 }
 
