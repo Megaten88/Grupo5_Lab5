@@ -27,3 +27,6 @@ Friend.o:  Contact.h Friend.h Friend.cpp
 
 Contact.o: Contact.h Contact.cpp
 	g++ -c Contact.cpp
+
+clean:
+	rm -f *.o main
