@@ -1,5 +1,10 @@
 #include "Contact.h"
 #include <string>
+Contact::Contact(string nombre, string tele, string correo){
+	name = nombre;
+	tel = tele;
+	email = correo;
+}
 
 void Contact::setName(string nombre){
 	name = nombre;

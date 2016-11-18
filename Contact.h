@@ -6,6 +6,8 @@ protected:
 	string tel;
 	string email;
 public:
+	Contact(string,string,string);
+	~Contact();
 	void setName(string);
 	string getName();
 	void setTel(string);
