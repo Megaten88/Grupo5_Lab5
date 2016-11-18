@@ -1,4 +1,5 @@
 #include "Friend.h"
+#include "Contact.h"
 #include <string>
 using std::string;
 Friend::Friend(string nombre,string telef, string correo, int nivel):Contact(nombre,telef,correo){
@@ -14,4 +15,7 @@ void Friend::setFlevel(int nivel){
 	}else{
 		flevel = nivel;
 	}
+}
+int Friend::getFlevel(){
+	return flevel;
 }
