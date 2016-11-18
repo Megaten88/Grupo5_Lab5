@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 class Contact{
-private:
+protected:
 	string name;
 	string tel;
 	string email;
