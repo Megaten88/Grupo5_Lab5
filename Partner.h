@@ -9,5 +9,6 @@ private:
 public:
 	Partner(string);
 	~Partner();
-	
+	void setDate(string);
+	string getDate();
 };

@@ -8,7 +8,9 @@ Contact::Contact(string nombre, string tele, string correo){
 	tel = tele;
 	email = correo;
 }
-
+Contact::~Contact(){
+	
+}
 void Contact::setName(string nombre){
 	name = nombre;
 }
@@ -24,6 +26,11 @@ string Contact::getTel(){
 void Contact::setEmail(string correo){
 	email = correo;
 }
-string getEmail(){
+string Contact::getEmail(){
 	return email;
+}
+string Contact::toString(){
+	stringstream ss;
+	ss<<"Nombre: " << name <<"; Teléfono: "<<tel<<"; Email: " <<email;
+	return ss.str();
 }

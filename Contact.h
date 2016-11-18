@@ -15,6 +15,6 @@ public:
 	void setTel(string);
 	string getTel();
 	void setEmail(string);
-	string getEmail();;
-	string toString()
+	string getEmail();
+	string toString();
 };
