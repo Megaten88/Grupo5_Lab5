@@ -83,6 +83,7 @@ int main(int argc, char const *argv[]) {
     			}
     		}
     		else if(select == 2){
+    			bool find = false;
     			string date;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -106,6 +107,7 @@ int main(int argc, char const *argv[]) {
     			}
     		}
     		else if(select == 3){
+    			bool find = false;
     			string trabajo;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -129,6 +131,7 @@ int main(int argc, char const *argv[]) {
     			}
     		}
     		else if(select == 4){
+    			bool find = false;
     			string clase;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -152,6 +155,7 @@ int main(int argc, char const *argv[]) {
     			}	
     		}
     		else if(select == 5){
+    			bool find = false;
     			string parentesco;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -175,6 +179,7 @@ int main(int argc, char const *argv[]) {
     			}			
     		}
     		else if(select == 6){
+    			bool find = false;
     			string horario;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -198,6 +203,7 @@ int main(int argc, char const *argv[]) {
     			}
     		}
     		else if(select == 7){
+    			bool find = false;
     			int nivel;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
@@ -225,6 +231,10 @@ int main(int argc, char const *argv[]) {
     		}
     	}
     	else if(opcion == 2){
+    		for (int i = 0; i < contactos.size(); ++i)
+    		{
+    			cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+    		}
     		int posicion;
     		cout<<"Ingrese la posición a eliminar: ";
     		cin>>posicion;
