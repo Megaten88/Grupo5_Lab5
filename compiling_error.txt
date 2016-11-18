@@ -1,188 +1,21 @@
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:2:0,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:1:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:5:2: error: ‘string’ does not name a type
-  string name;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:6:2: error: ‘string’ does not name a type
-  string tel;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:7:2: error: ‘string’ does not name a type
-  string email;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:9:16: error: expected ‘)’ before ‘,’ token
-  Contact(string,string,string);
-                ^
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:11:15: error: ‘string’ has not been declared
-  void setName(string);
-               ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:12:2: error: ‘string’ does not name a type
-  string getName();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:13:14: error: ‘string’ has not been declared
-  void setTel(string);
-              ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:14:2: error: ‘string’ does not name a type
-  string getTel();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:15:16: error: ‘string’ has not been declared
-  void setEmail(string);
-                ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:16:2: error: ‘string’ does not name a type
-  string getEmail();
-  ^~~~~~
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:1:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:6:9: error: ‘string’ does not name a type
-         string classmet;
-         ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:10:26: error: ‘string’ has not been declared
-         void setClassmet(string);
-                          ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:11:9: error: ‘string’ does not name a type
-         string getClassmet();
-         ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:12:1: error: expected ‘;’ after class definition
- }
- ^
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:4:1: error: prototype for ‘Classmate::Classmate(std::__cxx11::string, std::__cxx11::string, std::__cxx11::string, std::__cxx11::string)’ does not match any in class ‘Classmate’
- Classmate::Classmate(string nombre,string telef, string correo, string clase) : Contact(nombre,telef,correo){
- ^~~~~~~~~
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:1:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:4:7: error: candidates are: constexpr Classmate::Classmate(const Classmate&)
- class Classmate : public Contact {
-       ^~~~~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:8:9: error:                 Classmate::Classmate()
-         Classmate();
-         ^~~~~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:8:6: error: prototype for ‘void Classmate::setClassmet(std::__cxx11::string)’ does not match any in class ‘Classmate’
- void Classmate::setClassmet(string clase){
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:5:1: error: ‘Relative’ does not name a type
+ Relative::Relative(string nombre,string telef, string correo, string tipo) : Contact(nombre,telef,correo){
+ ^~~~~~~~
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:9:1: error: ‘Relative’ does not name a type
+ Relative::~Relative(){
+ ^~~~~~~~
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:13:6: error: ‘Classmate’ has not been declared
+ void Classmate::setType(string tipo){
       ^~~~~~~~~
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:1:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:10:14: error: candidate is: void Classmate::setClassmet(int)
-         void setClassmet(string);
-              ^~~~~~~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.cpp:12:43: error: no ‘std::__cxx11::string Classmate::getClassmet(std::__cxx11::string)’ member function declared in class ‘Classmate’
- string Classmate::getClassmet(string clase){
-                                           ^
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:1:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:5:2: error: ‘string’ does not name a type
-  string name;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:6:2: error: ‘string’ does not name a type
-  string tel;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:7:2: error: ‘string’ does not name a type
-  string email;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:9:16: error: expected ‘)’ before ‘,’ token
-  Contact(string,string,string);
-                ^
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:11:15: error: ‘string’ has not been declared
-  void setName(string);
-               ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:12:2: error: ‘string’ does not name a type
-  string getName();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:13:14: error: ‘string’ has not been declared
-  void setTel(string);
-              ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:14:2: error: ‘string’ does not name a type
-  string getTel();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:15:16: error: ‘string’ has not been declared
-  void setEmail(string);
-                ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:16:2: error: ‘string’ does not name a type
-  string getEmail();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:3:17: error: expected constructor, destructor, or type conversion before ‘(’ token
- Contact::Contact(string nombre, string tele, string correo){
-                 ^
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:9:23: error: variable or field ‘setName’ declared void
- void Contact::setName(string nombre){
-                       ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:9:23: error: ‘string’ was not declared in this scope
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:9:23: note: suggested alternatives:
-In file included from /usr/include/c++/6/string:39:0,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:2,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:1:
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-   typedef basic_string<char>    string;
-                                 ^~~~~~
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:12:1: error: ‘string’ does not name a type
- string Contact::getName(){
- ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:15:22: error: variable or field ‘setTel’ declared void
- void Contact::setTel(string telephone){
-                      ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:15:22: error: ‘string’ was not declared in this scope
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:15:22: note: suggested alternatives:
-In file included from /usr/include/c++/6/string:39:0,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:2,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:1:
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-   typedef basic_string<char>    string;
-                                 ^~~~~~
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:18:1: error: ‘string’ does not name a type
- string Contact::getTel(){
- ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:21:24: error: variable or field ‘setEmail’ declared void
- void Contact::setEmail(string correo){
-                        ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:21:24: error: ‘string’ was not declared in this scope
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:21:24: note: suggested alternatives:
-In file included from /usr/include/c++/6/string:39:0,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:2,
-                 from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:1:
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-   typedef basic_string<char>    string;
-                                 ^~~~~~
-/usr/include/c++/6/bits/stringfwd.h:74:33: note:   ‘std::__cxx11::string’
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.cpp:24:1: error: ‘string’ does not name a type
- string getEmail(){
- ^~~~~~
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/main.cpp:1:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:5:2: error: ‘string’ does not name a type
-  string name;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:6:2: error: ‘string’ does not name a type
-  string tel;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:7:2: error: ‘string’ does not name a type
-  string email;
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:9:16: error: expected ‘)’ before ‘,’ token
-  Contact(string,string,string);
-                ^
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:11:15: error: ‘string’ has not been declared
-  void setName(string);
-               ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:12:2: error: ‘string’ does not name a type
-  string getName();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:13:14: error: ‘string’ has not been declared
-  void setTel(string);
-              ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:14:2: error: ‘string’ does not name a type
-  string getTel();
-  ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:15:16: error: ‘string’ has not been declared
-  void setEmail(string);
-                ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Contact.h:16:2: error: ‘string’ does not name a type
-  string getEmail();
-  ^~~~~~
-In file included from /home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/main.cpp:2:0:
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:6:9: error: ‘string’ does not name a type
-         string classmet;
-         ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:10:26: error: ‘string’ has not been declared
-         void setClassmet(string);
-                          ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:11:9: error: ‘string’ does not name a type
-         string getClassmet();
-         ^~~~~~
-/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Classmate.h:12:1: error: expected ‘;’ after class definition
- }
- ^
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp: In function ‘void setType(std::__cxx11::string)’:
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:14:5: error: invalid use of ‘this’ in non-member function
+     this->type = tipo;
+     ^~~~
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp: At global scope:
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:17:8: error: ‘Classmate’ has not been declared
+ string Classmate::getType(){
+        ^~~~~~~~~
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp: In function ‘std::__cxx11::string getType()’:
+/home/carlos/Desktop/backup/ProgramasC++/Grupo5_Lab5/Relative.cpp:18:12: error: ‘classmet’ was not declared in this scope
+     return classmet;
+            ^~~~~~~~

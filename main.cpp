@@ -1,5 +1,6 @@
 #include "Contact.h"
 #include "Classmate.h"
+#include "Relative.h"
 #include <iostream>
 
 int main(int argc, char const *argv[]) {

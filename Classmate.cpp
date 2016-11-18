@@ -3,8 +3,6 @@
 #include <string>
 #include <iostream>
 using std::string;
-using std::string;
-using std::string;
 
 
 Classmate::Classmate(string nombre,string telef, string correo, string clase) : Contact(nombre,telef,correo){
