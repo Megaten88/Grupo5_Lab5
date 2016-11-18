@@ -1,12 +1,21 @@
 #include "Friend.h"
+#include "Contact.h"
 #include <string>
 using std::string;
-Friend::Friend(string nombre,string telef, string correo, int num):Contact(nombre,telef,correo){
-<<<<<<< HEAD
-
+Friend::Friend(string nombre,string telef, string correo, int nivel):Contact(nombre,telef,correo){
+	Friend::setFlevel(nivel);
+}
+Friend::~Friend(){
 
 }
-=======
-	flevel = num;
+void Friend::setFlevel(int nivel){
+	if (nivel>= 0 && nivel<= 100)
+	{
+		flevel = nivel;
+	}else{
+		flevel = nivel;
+	}
 }
->>>>>>> b2b0ba6bd7b5adee1196470bb5595eaf942944bc
+int Friend::getFlevel(){
+	return flevel;
+}
