@@ -1,6 +1,8 @@
 #include "Contact.h"
 #include <string>
 #include <sstream>
+
+using std::stringstream;
 using std::string;
 Contact::Contact(string nombre, string tele, string correo){
 	name = nombre;
@@ -28,8 +30,10 @@ void Contact::setEmail(string correo){
 string Contact::getEmail(){
 	return email;
 }
+
 string Contact::toString(){
 	stringstream ss;
 	ss<<"Nombre: " << name <<"; Teléfono: "<<tel<<"; Email: " <<email;
 	return ss.str();
+
 }
