@@ -6,10 +6,12 @@ protected:
 	string tel;
 	string email;
 public:
+	Contact(string,string,string);
+	~Contact();
 	void setName(string);
 	string getName();
-	void setTel();
+	void setTel(string);
 	string getTel();
-	void setEmail();
+	void setEmail(string);
 	string getEmail();
 };
