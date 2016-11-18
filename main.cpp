@@ -9,8 +9,10 @@
 #include <iostream>
 #include <vector>
 
+
+void menu();
 int main(int argc, char const *argv[]) {
-	vector<Contact> contactos;
+	vector<Contact*> contactos;
     std::cout << "hola" << std::endl;
     return 0;
 }
