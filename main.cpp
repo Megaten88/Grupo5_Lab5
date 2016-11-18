@@ -355,10 +355,6 @@ int main(int argc, char const *argv[]) {
 	    				cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
 	    			}
 	    		}
-	    		int posicion;
-	    		cout<<"Ingrese la posición a eliminar: ";
-	    		cin>>posicion;
-	    		contactos.erase(contactos.begin()+posicion);
     		}else{
     			cout<<"No hay contactos en la lista"<<endl;
     		}
@@ -369,7 +365,7 @@ int main(int argc, char const *argv[]) {
     		cout<<"Ingresó una opción inválida"<<endl;
     	}
     }while(opcion!= 5);
-    	for (int i = 0; i < contactos.size; ++i){
+    	for (int i = 0; i < contactos.size(); ++i){
 	    		contactos.erase(contactos.begin() + i);
 	   	}
     	contactos.clear();
