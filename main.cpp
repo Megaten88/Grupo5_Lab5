@@ -7,12 +7,37 @@
 #include "WorkPartner.h"
 #include "Blocked.h"
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <fstream>
 #include <vector>
+#include <typeinfo>
+
+//using namespace std;
 
 using namespace std;
+
+
 int menu();
+
+/*
+
+vector<Contact*> contactos;
+std::cout << "hola" << std::endl;
+
+Contact* prueba = new Lover("hola","soy","yo","el duro");
+contactos.push_back(prueba);
+int i = 0;
+while(contactos.at(i)!= NULL){
+    Contact* temp = contactos.at(i);
+    std::cout << temp->toString() << std::endl;
+    i++;
+}
+
+*/
+
+
+
 int main(int argc, char const *argv[]) {
 	vector<Contact*> contactos;
 	int opcion;
@@ -136,6 +161,7 @@ int main(int argc, char const *argv[]) {
 
     return 0;
 }
+
 int menu(){
 	int lectura;
 	cout<<"-----Menu-----"<<endl;
