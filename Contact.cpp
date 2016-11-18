@@ -29,8 +29,11 @@ void Contact::setEmail(string correo){
 string Contact::getEmail(){
 	return email;
 }
+<<<<<<< HEAD
 string Contact::toString(){
 	stringstream ss;
 	ss<<"Nombre: " << name <<"; Teléfono: "<<tel<<"; Email: " <<email;
 	return ss.str();
 }
+=======
+>>>>>>> 7cef80c0a0b25d9fd770fbaf85908385944f5010
