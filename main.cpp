@@ -66,54 +66,81 @@ int main(int argc, char const *argv[]) {
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese el nivel de amistad del 1no al 100: ";
+    			cin>>nivel;
+    			contactos.push_back(new Friend(nombre,telefono,correo,nivel));
     		}
     		else if(select == 2){
+    			string date;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese la fecha que comenzaron a salir: ";
+    			cin>>date;
+    			contactos.push_back(new Partner(nombre,telefono,correo,date));
     		}
     		else if(select == 3){
+    			string trabajo;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese el departamento de trabajo: ";
+    			cin>>trabajo;
+    			contactos.push_back(new WorkPartner(nombre,telefono,correo,trabajo));
     		}
     		else if(select == 4){
+    			string clase;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese la clase donde se conocieron: ";
+    			cin>>clase;
+    			contactos.push_back(new Classmate(nombre,telefono,correo,clase));
     		}
     		else if(select == 5){
+    			string parentesco;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese parentesco: ";
+    			cin>>parentesco;
+    			contactos.push_back(new Relative(nombre,telefono,correo,parentesco));
     		}
     		else if(select == 6){
+    			string horario;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese horario disponible: ";
+    			cin>>horario;
+    			contactos.push_back(new Lover(nombre,telefono,correo,horario));
     		}
     		else if(select == 7){
+    			int nivel;
     			cout<<"Ingrese el nombre: ";
     			cin>>nombre;
     			cout<<"Ingrese el telefono: ";
     			cin>> telefono;
     			cout<<"Ingrese el correo: ";
     			cin>> correo;
+    			cout<<"Ingrese nivel de odio del 1 al 100: ";
+    			cin>>nivel;
+    			contactos.push_back(new Blocked(nombre,telefono,correo,nivel));
     		}
     		else{
     			cout<<"Ingresó una opción inválida.";
@@ -123,7 +150,12 @@ int main(int argc, char const *argv[]) {
 
     	}
     	else if(opcion == 3){
-
+            int i = 0;
+            while( i < contactos.size() ){
+                Contact* temp = contactos.at(i);
+                std::cout << temp->toString() << std::endl;
+                i++;
+            }
     	}
     	else if(opcion == 4){
 
