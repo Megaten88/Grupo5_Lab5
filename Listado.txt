@@ -1,0 +1,16 @@
+-------Categorías-------
+
+*****Amigos*****
+0)Nombre: asdasdasd; Teléfono: asdasdasd; Email: asdasasd
+
+*****Pareja*****
+
+1)Nombre: asdasdasd; Teléfono: asdasdasdasd; Email: asdasdasd
+
+*****Compañero de Trabajo*****
+*****Compañero de clase*****
+*****Familiares*****
+*****Amantes*****
+2)Nombre: dsadasdasd; Teléfono: asdasda; Email: asdasd
+
+*****Bloqueos*****
