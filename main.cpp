@@ -233,7 +233,10 @@ int main(int argc, char const *argv[]) {
     	else if(opcion == 2){
     		for (int i = 0; i < contactos.size(); ++i)
     		{
-    			cout<<i<<")"<<contactos.at(i) -> toString()<<endl;
+    			if (dynamic_cast<Friend*>)
+    			{
+    				/* code */
+    			}
     		}
     		int posicion;
     		cout<<"Ingrese la posición a eliminar: ";
