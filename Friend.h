@@ -1,10 +1,12 @@
 #pragma once
 #include "Contact.h"
+#include <string>
+using std::string;
 class Friend:public Contact{
 private:
 	int flevel;
 public:
-	Friend();
+	Friend(string, int);
 	~Friend();
 	void setFlevel(int);
 	int getFlevel();

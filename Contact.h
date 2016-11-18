@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 using std::string;
+
 class Contact{
 protected:
 	string name;
@@ -14,5 +15,6 @@ public:
 	void setTel(string);
 	string getTel();
 	void setEmail(string);
-	string getEmail();
+	string getEmail();;
+	string toString()
 };
